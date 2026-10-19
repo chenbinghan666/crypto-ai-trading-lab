@@ -1,0 +1,11 @@
+FROM python:3.12-slim-bookworm@sha256:34386ef0cb081344d7ec1c103ba398e6e9f64e9ab3a1509accc92a4e24a07258
+ENV PYTHONUNBUFFERED=1 PYTHONDONTWRITEBYTECODE=1 LAB_BIND=0.0.0.0 LAB_STATE_DIR=/app/data/system LAB_LOG_DIR=/app/logs LANGCHAIN_TRACING_V2=false LANGSMITH_TRACING=false
+WORKDIR /app
+COPY requirements-tradingagents.lock.txt /app/requirements-tradingagents.lock.txt
+RUN pip install --no-cache-dir -r requirements-tradingagents.lock.txt && useradd --create-home --uid 10001 lab
+COPY --chown=lab:lab labapp /app/labapp
+COPY --chown=lab:lab web /app/web
+RUN mkdir -p /app/data/system /app/logs && chown -R lab:lab /app/data /app/logs
+USER lab
+EXPOSE 8082
+ENTRYPOINT ["python", "-m", "labapp.research_service"]

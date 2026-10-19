@@ -1,0 +1,37 @@
+.env
+.env.*
+!.env.example
+.venv/
+__pycache__/
+.pytest_cache/
+*.pyc
+data/
+logs/
+*.sqlite*
+*.db*
+models/
+user_data/
+dist/
+build/
+*.egg-info/
+.runtime/
+reports/backtests/*.zip
+reports/backtests/*.feather
+# Generated run evidence and workstation diagnostics stay local.
+reports/evidence/
+reports/backtests/
+reports/ENVIRONMENT_AUDIT.md
+reports/NETWORK_DIAGNOSIS.md
+reports/daily/*
+!reports/daily/TEMPLATE.md
+*.enc
+*.pem
+*.key
+*.p12
+*.pfx
+# Deployment evidence may include local account or machine information.
+reports/*
+!reports/daily/
+!reports/weekly/
+reports/weekly/*
+!reports/weekly/TEMPLATE.md

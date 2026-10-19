@@ -1,0 +1,6 @@
+# CPU-only FreqAI deployment, constrained by the base runtime lock.
+datasieve==0.1.9
+lightgbm==4.7.0
+narwhals==2.27.1
+scikit-learn==1.9.1
+threadpoolctl==3.7.0

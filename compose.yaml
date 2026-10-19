@@ -1,0 +1,80 @@
+name: crypto-ai-trading-lab
+services:
+  lab:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    init: true
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:8080:8080"
+      - "127.0.0.1:8081:8081"
+      - "127.0.0.1:8083:8083"
+    volumes:
+      - lab-data:/app/data
+      - lab-logs:/app/logs
+      - lab-user-data:/app/user_data
+    environment:
+      LAB_BIND: 0.0.0.0
+      LAB_STATE_DIR: /app/data/system
+      LAB_LOG_DIR: /app/logs
+      LAB_SECRETS_DIR: /app/data/system/private
+      LAB_EXTERNAL_RESEARCH: '1'
+    mem_limit: 2g
+    cpus: 2
+    pids_limit: 128
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
+    stop_grace_period: 45s
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8080/health', timeout=3)"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 30s
+  research:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.research
+    init: true
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:8082:8082"
+    volumes:
+      - lab-data:/app/data
+      - lab-logs:/app/logs
+    environment:
+      LAB_BIND: 0.0.0.0
+      LAB_STATE_DIR: /app/data/system
+      LAB_LOG_DIR: /app/logs
+      LAB_SECRETS_DIR: /app/data/system/private
+    mem_limit: 1g
+    cpus: 1
+    pids_limit: 64
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8082/health', timeout=3)"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 45s
+    stop_grace_period: 15s
+volumes:
+  lab-data:
+  lab-logs:
+  lab-user-data:
