@@ -1,5 +1,11 @@
 # Crypto AI Trading Lab · 量化研究与模拟工作台
 
+**简体中文** · [English](https://github.com/chenbinghan666/crypto-ai-trading-lab/blob/main/docs/locales/README.en.md) · [日本語](https://github.com/chenbinghan666/crypto-ai-trading-lab/blob/main/docs/locales/README.ja.md) · [Deutsch](https://github.com/chenbinghan666/crypto-ai-trading-lab/blob/main/docs/locales/README.de.md) · [Français](https://github.com/chenbinghan666/crypto-ai-trading-lab/blob/main/docs/locales/README.fr.md) · [Español](https://github.com/chenbinghan666/crypto-ai-trading-lab/blob/main/docs/locales/README.es.md) · [Português](https://github.com/chenbinghan666/crypto-ai-trading-lab/blob/main/docs/locales/README.pt.md)
+
+把策略回测、FreqAI 模型实验和合约模拟放进一个中文工作台。可以用独立虚拟账本比较规则组和模型组，当前用途是研究和模拟。
+
+Python · Freqtrade · FreqAI
+
 独立运行的加密货币研究和合约模拟系统，提供中文 Web 管理页面，集成 Freqtrade / FreqUI、FreqAI CPU LightGBM 和 TradingAgents / DeepSeek。运行时不依赖 Codex 或聊天会话。
 
 **当前仅支持研究与虚拟交易，真实交易禁止。策略和模型均不代表已验证盈利。**
