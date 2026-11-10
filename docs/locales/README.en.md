@@ -10,6 +10,14 @@ An independent cryptocurrency research and contract simulation system that provi
 
 **The project supports research and paper trading only. The strategies and models have no demonstrated profitability.**
 
+## Demo
+
+Uses sample signals and a temporary database to show both experiment arms and duplicate intent handling.
+
+[![Demo](../../docs/images/project-demo.gif)](../../docs/images/project-demo.mp4)
+
+[Download MP4](../../docs/images/project-demo.mp4?raw=true)
+
 ## Features
 
 - Binance public quotes, connection diagnosis, K-line and refresh countdown; Gate permanent public quotes are used for independent contract simulation.

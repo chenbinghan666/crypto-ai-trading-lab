@@ -10,6 +10,14 @@ Python · Freqtrade · FreqAI
 
 **当前仅支持研究与虚拟交易，真实交易禁止。策略和模型均不代表已验证盈利。**
 
+## 实操演示
+
+用本地测试信号演示规则组和模型组如何记录信号、拦截重复指令。全程使用临时数据库。
+
+[![实操演示](docs/images/project-demo.gif)](docs/images/project-demo.mp4)
+
+[下载 MP4](docs/images/project-demo.mp4?raw=true)
+
 ## 功能
 
 - Binance 公共行情、连接诊断、K 线及刷新倒计时；Gate 永续公开行情用于独立合约模拟。

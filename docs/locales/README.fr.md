@@ -10,6 +10,14 @@ Un système indépendant de recherche et de simulation de contrats de crypto-mon
 
 **ne prend actuellement en charge que la recherche et le trading virtuel, le trading réel étant interdit. Ni les stratégies ni les modèles ne représentent une rentabilité prouvée.**
 
+## Démonstration
+
+Utilise des signaux d’exemple et une base temporaire pour comparer les deux groupes et vérifier le rejet des instructions en double.
+
+[![Démonstration](../../docs/images/project-demo.gif)](../../docs/images/project-demo.mp4)
+
+[Télécharger le MP4](../../docs/images/project-demo.mp4?raw=true)
+
 ## Fonction
 
 - Cotations publiques Binance, diagnostic de connexion, compte à rebours K-line et rafraîchissement ; Les devis publics permanents de Gate sont utilisés pour la simulation de contrats indépendants.

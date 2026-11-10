@@ -10,6 +10,14 @@ Ein unabhängiges Kryptowährungs-Recherche- und Vertragssimulationssystem, das 
 
 **unterstützt derzeit nur Forschung und virtuellen Handel, realer Handel ist verboten. Weder Strategien noch Modelle stellen eine nachgewiesene Rentabilität dar.**
 
+## Demo
+
+Zeigt mit Testsignalen und temporärer Datenbank beide Versuchsgruppen und die Behandlung doppelter Auftragsabsichten.
+
+[![Demo](../../docs/images/project-demo.gif)](../../docs/images/project-demo.mp4)
+
+[MP4 herunterladen](../../docs/images/project-demo.mp4?raw=true)
+
 ## Funktion
 
 - Öffentliche Binance-Kurse, Verbindungsdiagnose, K-Line und Aktualisierungs-Countdown; Die permanenten öffentlichen Kurse von Gate werden zur unabhängigen Vertragssimulation verwendet.

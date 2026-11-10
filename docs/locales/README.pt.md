@@ -10,6 +10,14 @@ Um sistema independente de pesquisa de criptomoedas e simulação de contratos q
 
 **atualmente suporta apenas pesquisa e negociação virtual, a negociação real é proibida. Nem estratégias nem modelos representam rentabilidade comprovada.**
 
+## Demonstração
+
+Usa sinais de exemplo e um banco temporário para mostrar os dois grupos e verificar o bloqueio de instruções duplicadas.
+
+[![Demonstração](../../docs/images/project-demo.gif)](../../docs/images/project-demo.mp4)
+
+[Baixar MP4](../../docs/images/project-demo.mp4?raw=true)
+
 ## Função
 
 - Cotações públicas da Binance, diagnóstico de conexão, linha K e contagem regressiva de atualização; As cotações públicas permanentes da Gate são usadas para simulação de contratos independentes.
